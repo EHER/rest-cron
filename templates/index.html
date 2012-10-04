@@ -1,2 +1,9 @@
+<link type="text/css" rel="stylesheet" href="static/ghf_marked.css">
 <h1>REST Cron</h1>
-<p>Uma interface REST para gerenciar seu Cron.</p>
+<p>A REST way to manage your Cron</p>
+<p>List schedulled jobs:</p>
+<p><code>curl -XGET http://localhost:8080/cron</code></p>
+<p>Get a job with id 1:</p>
+<p><code>curl -XGET http://localhost:8080/cron/1</code></p>
+<p>Delete a job with id 2:</p>
+<p><code>curl -XDELETE http://localhost:8080/cron/2</code></p>
