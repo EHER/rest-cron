@@ -1,3 +1,6 @@
-elementtree==1.2.7-20070827-preview
 Markdown==2.2.0
+Paste==1.7.5.1
+elementtree==1.2.7-20070827-preview
+nose==1.2.1
 web.py==0.37
+wsgiref==0.1.2
