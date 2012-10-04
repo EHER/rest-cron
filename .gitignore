@@ -4,3 +4,5 @@
 /bin
 /include
 /lib
+/man
+/database/rest-cron.db

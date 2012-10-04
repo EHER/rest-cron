@@ -3,6 +3,7 @@ import web
 
 
 render = web.template.render('templates/')
+db = web.database(dbn='sqlite', db='database/rest-cron.db')
 
 
 class Homepage:
@@ -12,38 +13,11 @@ class Homepage:
 
 class CronList:
     def GET(self):
-        return json.dumps(
-                {"cron": [
-                    {
-                        "id": "1",
-                        "minute": "1",
-                        "hour": "*",
-                        "day_of_month": "*",
-                        "month": "*",
-                        "day_of_week": "*",
-                        "command": "ls -lah"
-                    },
-                    {
-                        "id": "2",
-                        "minute": "1",
-                        "hour": "*",
-                        "day_of_month": "*",
-                        "month": "*",
-                        "day_of_week": "*",
-                        "command": "ls -lah"
-                    }
-                ]}
-            )
+        cron_list = db.select('cron')
+        return json.dumps(list(cron_list))
 
 
 class Cron:
     def GET(self, id):
-        return json.dumps({
-            "id": id,
-            "minute": "1",
-            "hour": "*",
-            "day_of_month": "*",
-            "month": "*",
-            "day_of_week": "*",
-            "command": "ls -lah"
-            })
+        cron = db.select('cron', dict(cron_id=id), where="id=$cron_id")
+        return json.dumps(list(cron))
