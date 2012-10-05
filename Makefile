@@ -9,7 +9,7 @@ help:
 	@echo test
 	@echo run
 
-install: virtualenv dependencies database
+install: virtualenv dependencies db
 
 virtualenv:
 	virtualenv .
