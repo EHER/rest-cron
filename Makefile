@@ -5,7 +5,7 @@ help:
 	@echo install
 	@echo virtualenv
 	@echo dependencies
-	@echo database
+	@echo db
 	@echo test
 	@echo run
 
@@ -17,7 +17,7 @@ virtualenv:
 dependencies:
 	. bin/activate; pip install -r deps.txt
 
-database:
+db:
 	sqlite3 database/rest-cron.db < database/rest-cron.sql
 
 test:
