@@ -1,4 +1,4 @@
-#REST Cron[![Build Status](https://travis-ci.org/EHER/rest-cron.png)](https://travis-ci.org/EHER/rest-cron)
+#REST Cron [![Build Status](https://travis-ci.org/EHER/rest-cron.png)](https://travis-ci.org/EHER/rest-cron)
 A REST way to manage your Cron.
 
 ##Dependencies
